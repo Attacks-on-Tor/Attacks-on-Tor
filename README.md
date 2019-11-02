@@ -1,34 +1,8 @@
----
-abstract: |
-    **Tor is the largest anonymous communication network. Recent papers
-    discuss the vulnerabilities of Tor’s Onion Router design and question
-    the effectiveness of Tor. These vulnerabilities are increasingly
-    exploited by de-anonymizing attacks. Over the years the attacks have
-    grown to be more complex and effective, increasing the need for hybrid
-    attacks that can be deployed at the network layer, protocol layer or
-    application layer. We will discuss published attacks on Tor and
-    categorize them for further analysis. Tor’s principles of freedom and
-    privacy have also introduced some ethical vulnerabilities. The cover
-    that the network provides attracts criminal behavior and has led to a
-    bad reputation. This has caused lawyer-based attacks and adjustments on
-    the fourth amendment to be a point of discussion. Additionally, Tor
-    deals with financial insecurities and a dependency on volunteers. To
-    ensure the continuity of Tor, a dynamic ecosystem should be built around
-    the network by stimulating further development and research in anonymous
-    communication services.**
 
-    **KEYWORDS:** Tor, onion routing, de-anonymization, attacks,
-    vulnerabilities, lawyer-based attack, fourth amendment
-author:
-- |
-    B. Evers, J. Hols, E. Kula, J. Schouten, M. den Toom, R.M. van der
-    Laan,\
-    J.A. Pouwelse (course supervisor)\
-    Computer Science, Delft University of Technology, The Netherlands
-bibliography:
-- 'bibliography.bib'
-title: '**Thirteen Years of Tor Attacks**'
----
+| **Abstract** | **Authors**  | **Title** |
+|--|--|--|
+| **Tor is the largest anonymous communication network. Recent papers discuss the vulnerabilities of Tor’s Onion Router design and question the effectiveness of Tor. These vulnerabilities are increasingly exploited by de-anonymizing attacks. Over the years the attacks have grown to be more complex and effective, increasing the need for hybrid attacks that can be deployed at the network layer, protocol layer or application layer. We will discuss published attacks on Tor and categorize them for further analysis. Tor’s principles of freedom and privacy have also introduced some ethical vulnerabilities. The cover that the network provides attracts criminal behavior and has led to a bad reputation. This has caused lawyer-based attacks and adjustments on the fourth amendment to be a point of discussion. Additionally, Tor deals with financial insecurities and a dependency on volunteers. To ensure the continuity of Tor, a dynamic ecosystem should be built around the network by stimulating further development and research in anonymous communication services.**<br> KEYWORDS: *Tor, onion routing, de-anonymization, attacks, vulnerabilities, lawyer-based attack, fourth amendment* | B. Evers, J. Hols, E. Kula, J. Schouten, M. den Toom, R.M. van der Laan,<br> Dr. ir. J.A. Pouwelse (supervisor)<br> Computer Science, Delft University of Technology, The Netherlands | **Thirteen Years of Tor Attacks**|
+
 
 Introduction
 ============
@@ -134,8 +108,9 @@ cryptography and a relay unwraps one layer of encryption and forwards
 the message to the next relay in the circuit @reed1998anonymous. A
 circuit usually consists of three relays.
 
-\[img:onion\] ![Overview of Tor’s Onion Routing Design
-@salo2010recent](Images/overviewtor "fig:"){width="50.00000%"}
+![Overview of Tor’s Onion Routing Design](https://user-images.githubusercontent.com/5946444/68077012-b42c6c80-fdbc-11e9-8f1d-f56b8475ff21.png)
+
+*Overview of Tor’s Onion Routing Design*
 
 Tor Protocol
 ------------
@@ -178,12 +153,13 @@ directory servers. A Bridge Authority lists all bridges. The Bridge
 Authority limits access to the bridges’ information to prevent the
 bridges from being blocked.
 
-![Circuit creation @wiangsripanawan2007design<span
-data-label="img:onion2"></span>](Images/proxytor){width="50.00000%"}
+![Circuit creation](https://user-images.githubusercontent.com/5946444/68077044-3ae14980-fdbd-11e9-8689-c561af325060.png)
 
-![A normal setup of hidden service communication in Tor
-@locatingservers<span
-data-label="img:hiddenservice"></span>](Images/locateserver){width="50.00000%"}
+*Circuit creation*
+
+![A normal setup of hidden service communication in Tor](https://user-images.githubusercontent.com/5946444/68077048-5f3d2600-fdbd-11e9-9bdd-63ff1e299e21.png)
+
+*A normal setup of hidden service communication in Tor*
 
 Hidden Service Protocol
 -----------------------
@@ -341,6 +317,14 @@ been published and discuss them. In Table \[tab:torattacks\] all attacks
 are listed in chronological order. Figure \[fig:M1\] shows a mind map
 that contains the attacks related to their category.
 
+![Thirteen years of Tor attacks - timeline](https://user-images.githubusercontent.com/5946444/68077165-37e75880-fdbf-11e9-9386-b020f886d96e.png)
+
+*Thirteen years of Tor attacks - timeline*
+
+![A mindmap that contains all important attacks on the Tor network that are published](https://user-images.githubusercontent.com/5946444/68077066-af1bed00-fdbd-11e9-8bb5-114bb1858711.png)
+
+*A mindmap that contains all important attacks on the Tor network that are published.*
+
 Attacks on Tor
 ==============
 
@@ -441,8 +425,9 @@ relay. An advanced recovery mechanism was developed to recover these
 distorted signals by analyzing the types of combinations and divisions
 of cells.
 
-![Workflow of Cell Counter Based Attack @somase2014analysis<span
-data-label="img:cellcounter"></span>](Images/cellcounter){width="50.00000%"}
+![Workflow of Cell Counter Based Attack](https://user-images.githubusercontent.com/5946444/68077082-03bf6800-fdbe-11e9-9edc-101b35675281.png)
+
+*Workflow of Cell Counter Based Attack.*
 
 This attack is very difficult to detect since the signal can be very
 short and can have many different properties, which makes it difficult
@@ -581,8 +566,9 @@ mention that the requirement of a malicious entry router is not
 necessary in the attack if an adversary can sniff the packets
 transmitted via the link between the client and the entry router.
 
-![Forged webpage injection attack @wang2011potential<span
-data-label="img:httpbased"></span>](Images/httpbased){width="50.00000%"}
+![Forged webpage injection attack](https://user-images.githubusercontent.com/5946444/68077092-2487bd80-fdbe-11e9-9f81-77391bc9076f.jpg)
+
+*Forged webpage injection attack.*
 
 As countermeasures they mention minimizing the chance of choosing
 malicious routers in a circuit. This can be done by increasing the total
@@ -882,10 +868,9 @@ this technique can lead to the discovery of all ORs on the path from
 client to server. One can imagine that using more corrupt ORs for
 probing the legitimate ORs leads to faster results.
 
-![This figure shows that the latency of the cells varies more during the
-congestion attack, compared to the control measurements
-@evans2009practical.<span
-data-label="img:congestion"></span>](Images/congestion_latency_diagram){width="50.00000%"}
+![The latency of the cells varies more during the congestion attack, compared to the control measurements.](https://user-images.githubusercontent.com/5946444/68077101-4719d680-fdbe-11e9-8f37-451c1b5023dd.png)
+
+*The latency of the cells varies more during the congestion attack, compared to the control measurements.*
 
 There is one additional use of this attack that is worth mentioning.
 When the ORs on the circuits of two different streams have been
@@ -1086,9 +1071,9 @@ Fourth and last, when the AS containing the OP of the client has been
 found, the final part of the path can be traced using the same
 technique, only this time using the more specific internal AS map.
 
-![Attacker investigating the fluctuations in available bandwidth of ORs
-participating in a Tor circuit @chakravarty2010traffic<span
-data-label="img:bandwidth"></span>](Images/bandwidth){width="50.00000%"}
+![Attacker investigating the fluctuations in available bandwidth of ORs participating in a Tor circuit](https://user-images.githubusercontent.com/5946444/68077112-79c3cf00-fdbe-11e9-8b0c-910572eda7de.png)
+
+*Attacker investigating the fluctuations in available bandwidth of ORs participating in a Tor circuit*
 
 Chakravarty et al. tested the attack in an emulated environment, an
 in-lab experiment and on the real Tor network. They executed the attack
@@ -1284,13 +1269,9 @@ received packets and once this window is full, the receiver sends a
 SENDME cell to the exit relay causing the exit relay to increase the
 package window counters and to restart the transmitting process.
 
-![Basic idea of the Sniper Attack: (a) The client creates a circuit with
-the target as entry. (b) The exit sends data through the circuit,
-ignoring package window limits. (c) The client stops reading from the
-TCP stream to the target entry. (d) The target entry buffers the data
-until termination of the Tor process by the OS.
-@jansenetall2014sniper<span
-data-label="img:sniper"></span>](Images/sniper){width="50.00000%"}
+![Basic idea of the Sniper Attack: (a) The client creates a circuit with the target as entry. (b) The exit sends data through the circuit, ignoring package window limits. (c) The client stops reading from the TCP stream to the target entry. (d) The target entry buffers the data until termination of the Tor process by the OS.](https://user-images.githubusercontent.com/5946444/68077120-96f89d80-fdbe-11e9-9bf7-0cd7d48a8486.png)
+
+*Basic idea of the Sniper Attack: (a) The client creates a circuit with the target as entry. (b) The exit sends data through the circuit, ignoring package window limits. (c) The client stops reading from the TCP stream to the target entry. (d) The target entry buffers the data until termination of the Tor process by the OS.*
 
 The paper @jansenetall2014sniper describes a few different versions of
 the attack, of which the most efficient variant (i.e. the one using the
@@ -1429,10 +1410,9 @@ problem can be exploited by adding malicious relays and strategically
 affecting the reliability of anonymous communications to increase the
 odds of an adversary compromising user anonymity @asiaccs2014sybil.
 
-![Setup of Sybil attack: two datasets as input to the attacker,
-consensus and server descriptors; malicious relays together with the
-exitmap @winter2016sybil<span
-data-label="img:sybil"></span>](Images/sybil){width="50.00000%"}
+![Setup of Sybil attack: two datasets as input to the attacker, consensus and server descriptors; malicious relays together with the exitmap](https://user-images.githubusercontent.com/5946444/68077124-af68b800-fdbe-11e9-9a54-280bccd8d0ac.png)
+
+*Setup of Sybil attack: two datasets as input to the attacker, consensus and server descriptors; malicious relays together with the exitmap.*
 
 Practical defenses against Sybil attacks are challenging, these attacks
 will probably always be possible in anonymity networks without a central
