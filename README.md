@@ -94,9 +94,9 @@ The Onion Router
 ================
 
 The Tor network is based on a low-latency onion-routing design, where
-traffic is forwarded through randomly selected , wrapping data in
-multiple layers of encryption (onion skins) to maintain unlinkability
-[[95]](#95). An is also called a *relay*, *node* or simply a router
+traffic is forwarded through randomly selected Onion Routers (ORs), 
+wrapping data in multiple layers of encryption (onion skins) to maintain unlinkability
+[[95]](#95). An OR is also called a *relay*, *node* or simply a router
 in this context. Each stream can be anonymously channeled through the
 network in a *telescoping fashion*, meaning that each router only knows
 the previous and the next relay in the path [[87]](#87). Only the
